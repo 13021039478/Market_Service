@@ -1,0 +1,355 @@
+/*我的页面*/
+body{
+	background-color: #F3F2F0;
+}
+.mine_head{
+	width: 100%;
+	height: 3.05rem;
+	padding-top: 0.25rem;
+	background-image: url(../img/mine_bg.png);
+	background-size: 100% 100%;
+	position: relative;
+}
+.mine_head .set{
+	width: 0.39rem;
+	height: 0.39rem;
+	background-image: url(../img/set_icon.png);
+	background-size: 100% 100%;
+	position: absolute;
+	right: 0.3rem;
+}
+.mine_head .head_img{
+	width: 1.6rem;
+	height: 1.6rem;
+	margin: 0 auto;
+	border-radius: 50%;
+}
+.mine_head .name{
+	width: 80%;
+	margin: 0.15rem auto 0;
+	text-align: center;
+	color: #fff;
+}
+.user_news{
+	margin-top: 0.3rem;
+	height: 1.3rem;
+	font-size: 0.26rem;
+}
+.user_news li{
+	width: 33.33%;
+	float: left;
+	color: #2BC1FF;
+	text-align: center;
+	position: relative;
+}
+.user_news li i{
+	display: inline-block;
+	width: 100%;
+	height: 0.22rem;
+	border-right: 0.04rem solid #2BC1FF;
+	position: absolute;
+	left: 0;
+	top: 0.3rem;
+}
+.contact_us{
+	height: 0.92rem;
+	line-height: 0.92rem;
+	border-bottom: 1px solid #E8E4E2;
+	padding-left: 0.4rem;
+	font-size: 0.26rem;
+}
+.contact_us .img{
+	width: 0.38rem;
+	height: 0.38rem;
+	margin-top: 0.1rem;
+	margin-right: 0.3rem;
+	float: left;
+}
+.contact_us .more{
+	float: right;
+	margin-right: 0.3rem;
+	width: 0.21rem;
+    height: 0.38rem;
+    margin-top: 0.12rem;
+}
+
+/*弹出框样式*/
+.top{
+	width: 100%;
+	height: 100%;
+	background: #777776;
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 99;
+	opacity: 0.6;
+}
+
+.alter_content{
+	width: 85%;
+	height: 2.3rem;
+	background: #fff;
+	border-radius: 10px;
+	text-align: center;
+	position: fixed;
+	top:35%;
+	left: 7.5%;
+	z-index: 100;
+	display: none;
+}
+.alter_content .content_top{
+	width: 100%;
+	height: 1.6rem;
+	border: 1px solid #c2c3c4;
+}
+.alter_content .content_top h3{
+	font-size: 0.3rem;
+	font-weight: 0;
+	margin-top: 0.3rem;
+	margin-bottom: 0.2rem;
+}
+.alter_content .content_btn{
+	width: 100%;
+	height: 0.7rem;
+	background-color: #f5f6f8;
+	display: table;
+	border-radius: 0 0 10px 10px;
+}
+.alter_content .content_btn a{
+	width: 50%;
+	height: 0.69rem;
+	line-height: 0.69rem;
+	display: table-cell;
+	border: 0;
+	text-align: center;
+	color: #C2C3C4;
+	background: transparent;
+	font-size: 0.28rem;
+}
+
+/*帐号注册*/
+.enter{
+	width: 100%;
+	height: 0.93rem;
+	line-height: 0.93rem;
+	border-bottom: 1px solid #E8E4E2;
+	padding-left: 0.26rem;
+	color: #000;
+}
+.enter label{
+	display: inline-block;
+    width: 1.2rem;
+    text-align: right;
+}
+.enter input{
+	width: 60%;
+	border: none;
+	height: 0.83rem;
+	outline: medium;
+	font-size: 0.24rem;
+	margin-left: 0.2rem;
+	color: #333;
+}
+.enter .getCode{
+	display: inline-block;
+	width: 1.53rem;
+	height: 0.5rem;
+	line-height: 0.5rem;
+	background: #2BC1FF;
+	color: #fff;
+	text-align: center;
+	border-radius: 5px;
+}
+.bind,.save{
+	width: 90%;
+	height: 0.75rem;
+	line-height: 0.75rem;
+	color: #fff;
+	background-color: #2BC1FF;
+	border-radius: 5px;
+	text-align: center;
+	margin-top: 0.95rem;
+	margin-left: 5%;
+	border: none;
+	font-size: 0.3rem;
+}
+.care{
+	width: 100%;
+	padding-left: 5%;
+	font-size: 0.2rem;
+	margin-top: 0.8rem;
+}
+.care p:first-child{
+	margin-bottom: 0.1rem;
+	color: #2BC1FF;
+}
+.care p:first-child i{
+	background-color: #2BC1FF;
+}
+.care p:last-child{
+	color: #B5B5B5;
+}
+.care p:last-child i{
+	background-color: #B5B5B5;
+}
+.care p i{
+	display: inline-block;
+	width: 0.08rem;
+	height: 0.08rem;
+	border-radius: 50%;
+	margin-bottom: 0.03rem;
+	margin-right: 0.2rem;
+}
+
+/*常见问题*/
+#question{
+	width: 100%;
+	height: 2.17rem;
+	border-bottom: 2px solid #E8E4E2;
+	padding: 0.2rem;
+}
+#question  .img{
+	width: 0.26rem;
+	height: 0.26rem;
+	margin-right: 0.3rem;
+	float: left;
+    margin-top: 0.04rem;
+}
+#question >div:first-child{
+	color: #2BC1FF;
+	font-size: 0.3rem;
+    margin-bottom: 0.1rem;
+}
+#question >div:nth-child(2){
+	color: #000;
+	font-size: 0.28rem;
+	margin-bottom: 0.1rem;
+}
+#question >div:last-child{
+	color: #cdcdcd;
+}
+
+/*在线咨询*/
+.speak_window{
+	overflow-y:scroll;
+	height:100%;
+	width:100%;
+	position:fixed;
+	top:0;
+	left:0;
+	padding-top: 0.1rem;
+}
+.speak_box{
+	margin-bottom:0.7rem;
+	padding:0.2rem;
+}
+.speak_box .question,.speak_box .answer{
+	margin-bottom:0.5rem;
+	position: relative;
+}
+.speak_box .answer span{
+	position: absolute;
+	left: 0.1rem;
+	top: 1rem;
+}
+.speak_box .question{
+	text-align:right;
+}
+.speak_box .question span{
+	position: absolute;
+	right: 0.2rem;
+	top: 1rem;
+}
+.speak_box .question>div{
+	display:inline-block;
+}
+.speak_box .left{float:left;}
+.speak_box .right{float:right;}
+.speak_box .clear{clear:both;}
+.speak_box .heard_img{
+	height:0.96rem;
+	width:0.95rem;
+}
+.speak_box .question_text,.speak_box .answer_text{
+	position:relative;
+	display:table-cell;
+	min-height:0.6rem;
+}
+.speak_box .question_text{padding-right:0.2rem;}
+.speak_box .answer_text{padding-left:0.2rem;}
+.speak_box .question_text p,.speak_box .answer_text p{
+    border-radius: 10px;
+    padding: .2rem;
+    margin: 0;
+    vertical-align: middle;
+    display: table-cell;
+    word-wrap: break-word;
+}
+.speak_box .answer_text p{
+	background:#fcfbeb;
+}
+.speak_box .question_text p{
+	background:#f7f8f5;
+	text-align:left;
+}
+.speak_box .question_text i,.speak_box .answer_text i{
+	width:0;
+	height:0;
+	border-top:0.08rem solid transparent;
+	border-bottom:0.08rem solid transparent;
+	position:absolute;
+	top:0.25rem;
+}
+.speak_box .answer_text i{
+	border-right:0.16rem solid #fcfbeb;
+	left:0;
+}
+.speak_box .question_text i{
+	border-left:0.16rem solid #f7f8f5;
+	right:10px;
+}
+
+.speak_box .line{
+	padding: 0 0.2rem 0;
+    margin: 0.2rem 0;
+    line-height: 0.02rem;
+    border-left: 2rem dashed #ddd;
+    border-right: 2rem dashed #ddd;
+    text-align: center;
+}
+
+.send_box{
+	width: 100%;
+	height: 0.8rem;
+	background-color: #E8E4E2;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+
+}
+.send_box input{
+	width: 70%;
+	height: 0.5rem;
+	line-height: 0.5rem;
+	margin-top: 0.15rem;
+	margin-left: 0.4rem;
+	border: 1px solid #E8E4E2;
+	outline: medium;
+	padding-left: 0.1rem;
+	font-size: 0.26rem;
+}
+.send_box button{
+	width: 0.8rem;
+	height: 0.5rem;
+	line-height: 0.5rem;
+	color: #fff;
+	text-align: center;
+	background-color: #2BC1FF;
+	border: none;
+	border-radius: 5px;
+	float: right;
+	margin-right: 0.3rem;
+	margin-top: 0.15rem;
+	font-size: 0.26rem;
+}

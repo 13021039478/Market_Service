@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<script src="js/fit.js" type="text/javascript" charset="utf-8"></script>
+		<title>服务包领取</title>
+		<link rel="stylesheet" href="css/reset.css" />
+		<!--<link rel="stylesheet" href="css/comm.css" />-->
+		<style type="text/css">
+			html,
+			body {
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+			}
+			
+			body {
+				background: url(img/active-bg.jpg) no-repeat;
+				background-size: 100% 100%;
+			}
+			
+			.active-btn {
+				width: 2.79rem;
+				height: 1.03rem;
+				margin: 0 auto;
+				margin-top: 8.5rem;
+			}
+			/*弹出框样式*/
+			
+			.top {
+				width: 100%;
+				height: 100%;
+				background: #777776;
+				display: none;
+				position: fixed;
+				top: 0;
+				left: 0;
+				z-index: 99;
+				opacity: 0.6;
+			}
+			
+			.alter_content,
+			.alter_order {
+				width: 85%;
+				height: 2.3rem;
+				background: #fff;
+				border-radius: 10px;
+				text-align: center;
+				position: fixed;
+				top: 35%;
+				left: 7.5%;
+				z-index: 100;
+				display: none;
+			}
+			
+			.alter_content .content_top,
+			.alter_order .content_top {
+				width: 100%;
+				height: 1.6rem;
+				border: 1px solid #c2c3c4;
+			}
+			
+			.alter_content .content_top h3,
+			.alter_order .content_top h3 {
+				font-size: 0.3rem;
+				font-weight: 0;
+				margin-top: 0.3rem;
+				margin-bottom: 0.2rem;
+			}
+			
+			.alter_content .content_btn,
+			.alter_order .content_btn {
+				width: 100%;
+				height: 0.7rem;
+				background-color: #f5f6f8;
+				display: table;
+				border-radius: 0 0 10px 10px;
+			}
+			
+			.alter_content .content_btn button,
+			.alter_order .content_btn button {
+				width: 50%;
+				height: 0.69rem;
+				line-height: 0.69rem;
+				display: table-cell;
+				border: 0;
+				text-align: center;
+				color: #C2C3C4;
+				background: transparent;
+				font-size: 0.28rem;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="active-btn">
+			<img src="img/active-btn.png" alt="" />
+		</div>
+		<!--删除弹出窗-->
+		<div class="top"></div>
+		<div class="alter_content">
+			<div class="content_top">
+				<h3>提示</h3>
+				<p>是否领取？</p>
+			</div>
+			<div class="content_btn">
+				<button style="border-right: 1px solid #c2c3c4;" id="cancel">取消</button>
+				<button style="color: #7bbef8;" id="confirm">确定</button>
+			</div>
+		</div>
+	</body>
+	<script src="js/jquery-1.8.3.min.js"></script>
+	<script src="js/cokie.js"></script>
+	<script>
+		$(function() {
+			//	获取code
+			var codeStr = getCodeString('code');
+			console.log(codeStr);
+			//			授权登录获取用户信息	
+			if(!getCookie("loginStatus")) {
+				$.ajax({
+					type: "post",
+					url: baseurl + "/invokingUserCenterRest/login.json",
+					data: { code: codeStr, productType: 0 },
+					success: function(data) {
+						console.log(data);
+						if(data.success) {
+							addCookie("token", data.datas.token, 8);
+							addCookie("headimg", data.datas.headimgurl, 8);
+							addCookie("nickname", data.datas.nickname, 8);
+							addCookie("openId", data.datas.openid, 8);
+							addCookie("loginStatus", 1, 8);
+							addCookie("phone", data.datas.mobile);
+							addCookie("currentPoints", data.datas.currentPoints, 8);
+						} else if(data.resultCode == -1) {
+							alert(data.message)
+						} else if(data.resultCode == 1) {
+							alert("登录失效，请重新授权！")
+							clearAllCookie();
+						} else if(data.resultCode == 2) {
+							alert("参数无效")
+						} else if(data.resultCode == 3) {
+							alert("处理失败，请重新操作")
+						}
+
+					}
+				});
+			}
+			
+
+		})
+		$(".active-btn").click(function() {
+//				$(this).attr("disabled",true);
+				if(!getCookie("phone")) {
+					window.location = 'set2.html';
+				} else {
+					$(".top").css("display", "block");
+					$(".alter_content").css("display", "block");
+					$("#confirm").click(function() {
+						$.ajax({
+					type: "post",
+					url: baseurl + "/accumulatePoints/pointsRefill.json",
+					data: { token: getCookie("token"), cardNum: getCookie("cardNum") },
+					success: function(data) {
+						console.log(data);
+						if(data.success) {
+							alter("领取成功")
+						} else if(data.resultCode == -1) {
+							alert(data.message)
+						} else if(data.resultCode == 1) {
+							alert("登录失效，请重新授权！")
+							clearAllCookie();
+						} else if(data.resultCode == 2) {
+							alert("参数无效")
+						} else if(data.resultCode == 3) {
+							alert("处理失败，请重新操作")
+						}
+
+					}
+				});
+					})
+				}
+			})
+			$("#cancel").click(function() {
+				$(".top").css("display", "none");
+				$(".alter_content").css("display", "none");
+			})
+	</script>
+
+</html>

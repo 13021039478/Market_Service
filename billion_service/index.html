@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=640" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="">
+    <meta name="format-detection" content="telephone=no">
+    <title>授权登录</title>
+    
+    <script type="text/javascript">
+        /(iPhone|iPad|iPhone OS|Phone|iPod|iOS)/i.test(navigator.userAgent) && (head = document.getElementsByTagName("head"), viewport = document.createElement("meta"), viewport.name = "viewport", viewport.content = "target-densitydpi=device-dpi, width=375px, user-scalable=no", head.length > 0 && head[head.length - 1].appendChild(viewport))
+        window.onload = function () {
+            
+            window.location.href = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx5fccba39d356ea79&redirect_uri=http%3A%2F%2Fug.itest.aicself.com%2Fbillion%2Fhome.html&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect";
+//      window.location.href = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx50c81e7f7f963940&redirect_uri=http%3A%2F%2F53d9b896.ngrok.io%2Fbillion_service%2Fhome.html&response_type=code&scope=snsapi_userinfo&state=STATE#wechat_redirect";
+        }
+        
+    </script>
+</head>
+<body>
+
+</body>
+</html>

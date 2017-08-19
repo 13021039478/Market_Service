@@ -1,0 +1,172 @@
+/*弹出框样式*/
+
+.top {
+	width: 100%;
+	height: 100%;
+	background: #777776;
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 99;
+	opacity: 0.6;
+}
+
+.alter_content {
+	width: 85%;
+	height: 2.3rem;
+	background: #fff;
+	border-radius: 10px;
+	text-align: center;
+	position: fixed;
+	top: 35%;
+	left: 7.5%;
+	z-index: 100;
+	display: none;
+}
+
+.alter_content .content_top {
+	width: 100%;
+	height: 1.6rem;
+	border: 1px solid #c2c3c4;
+}
+
+.alter_content .content_top h3 {
+	font-size: 0.3rem;
+	font-weight: 0;
+	margin-top: 0.3rem;
+	margin-bottom: 0.2rem;
+}
+
+.alter_content .content_btn {
+	width: 100%;
+	height: 0.7rem;
+	background-color: #f5f6f8;
+	display: table;
+	border-radius: 0 0 10px 10px;
+}
+
+.alter_content .content_btn a {
+	width: 50%;
+	height: 0.69rem;
+	line-height: 0.69rem;
+	display: table-cell;
+	border: 0;
+	text-align: center;
+	color: #C2C3C4;
+	background: transparent;
+	font-size: 0.28rem;
+}
+
+
+/*帐号注册*/
+
+.enter {
+	width: 100%;
+	height: 0.93rem;
+	line-height: 0.93rem;
+	border-bottom: 1px solid #E8E4E2;
+	padding-left: 0.26rem;
+	color: #000;
+	background: #fff;
+}
+
+.enter label {
+	display: inline-block;
+	width: 1.2rem;
+	text-align: right;
+}
+
+.enter input ,.enter select{
+	width: 60%;
+	border: none;
+	height: 0.83rem;
+	outline: medium;
+	font-size: 0.24rem;
+	margin-left: 0.2rem;
+	color: #333;
+}
+
+.enter .getCode {
+	display: inline-block;
+	width: 1.53rem;
+	height: 0.5rem;
+	line-height: 0.5rem;
+	background: #2BC1FF;
+	color: #fff;
+	text-align: center;
+	border-radius: 5px;
+}
+
+.bind,
+.save ,
+.next{
+	width: 90%;
+	height: 0.75rem;
+	line-height: 0.75rem;
+	color: #fff;
+	background-color: #2BC1FF;
+	border-radius: 5px;
+	text-align: center;
+	margin-top: 0.95rem;
+	margin-left: 5%;
+	border: none;
+	font-size: 0.3rem;
+}
+
+.care {
+	width: 100%;
+	padding-left: 5%;
+	font-size: 0.2rem;
+	margin-top: 0.8rem;
+}
+
+.care p:first-child {
+	margin-bottom: 0.1rem;
+	color: #2BC1FF;
+}
+
+.care p:first-child i {
+	background-color: #2BC1FF;
+}
+
+.care p:last-child {
+	color: #B5B5B5;
+}
+
+.care p:last-child i {
+	background-color: #B5B5B5;
+}
+
+.care p i {
+	display: inline-block;
+	width: 0.08rem;
+	height: 0.08rem;
+	border-radius: 50%;
+	margin-bottom: 0.03rem;
+	margin-right: 0.2rem;
+}
+
+.bar {
+	width: 4.9rem;
+	height: 0.71rem;
+	margin: 0.3rem auto;
+}
+
+.news-div{
+	width: 100%;
+    height: 1rem;
+    line-height: 1rem;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    font-size: 0.26rem;
+}
+.news-div span:first-child{
+	margin-left: 0.2rem;
+}
+.news-div span:last-child{
+	float: right;
+	text-align: right;
+	padding-right: 0.5rem;
+	color: #000;
+}

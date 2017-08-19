@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<script src="js/fit.js"></script>
+		<title>在线咨询</title>
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/comm.css" />
+		<link rel="stylesheet" href="css/mine.css" />
+	</head>
+
+	<body style="background-color: #fff;">
+		<div class="speak_window">
+			<div class="speak_box">
+				<div class="answer">
+					<div class="heard_img left">
+						<img src="img/app_head.png">
+					</div>
+					<span class="time_left"></span>
+					<div class="answer_text">
+						<p>您好！感谢您使用亿元联盟系统，如您在使用过程中遇到问题，请反馈给我们。</p>
+						<i></i>
+					</div>
+				</div>
+				<!--分割线-->
+				<div class="line">
+					
+				</div>
+				<!--<div class="question">
+					<div class="heard_img right"><img src="img/user_head.png"></div>
+					<span>12:08</span>
+					<div class="question_text clear">
+						<p>Hey</p>
+						<i></i>
+					</div>
+				</div>-->
+			</div>
+		</div>
+		<!--底部发送框-->
+		<div class="send_box">
+			<input type="text" />
+			<button onclick="send()">发送</button>
+		</div>
+	</body>
+	<script src="js/jquery-1.8.3.min.js"></script>
+	<script src="js/cokie.js"></script>
+	<script>
+		$(function(){
+			var date=new Date();
+			var hour=date.getHours();       //获取当前小时数(0-23)
+            var minute=date.getMinutes();     //获取当前分钟数(0-59)
+            var str=hour+':'+minute;
+            $(".time_left").html(str);
+		})
+		function send() {
+			var headimg=decodeURIComponent(getCookie("headimg")) ;
+			var text = $('.send_box input').val(),
+			str = '<div class="question">';
+			str += '<div class="heard_img right"><img src="'+headimg+'"/></div>';
+			str += '<span class="time_right"></span>';
+			str += '<div class="question_text clear"><p>' + text + '</p><i></i>';
+			str += '</div></div>';
+
+			if(text == '') {
+				alert('请输入您的问题！');
+				$('.send_box input').focus();
+			} else {
+				$('.speak_box').append(str);
+				$('.send_box input').val('');
+				$('.send_box input').focus();
+
+			}
+			var date=new Date();
+			var nowDate=date.toLocaleDateString();     //获取当前日期
+			$(".line").html(nowDate);
+			var hour=date.getHours();       //获取当前小时数(0-23)
+            var minute=date.getMinutes();     //获取当前分钟数(0-59)
+            var str=hour+':'+minute;
+            console.log(str);
+            $(".time_right").html(str);
+			
+		}
+	</script>
+
+</html>

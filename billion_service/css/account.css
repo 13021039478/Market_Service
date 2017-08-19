@@ -1,0 +1,94 @@
+body{
+	background-color: #fff
+}
+.order_pro{
+	width: 100%;
+	height: 1.95rem;
+	border-bottom: 1px solid #eee;
+	padding-top: 0.24rem;
+	background-color: #fff;
+	padding-left: 0.3rem;
+	position: relative;
+}
+.order_pro .img{
+	width: 1.42rem;
+	height: 1.42rem;
+	float: left;
+}
+.order_pro .del{
+	width: 0.25rem;
+	height: 0.25rem;
+	position: absolute;
+	top: 0.2rem;
+	right: 0.3rem;
+}
+.order_pro .text{
+	width: 65%;
+	float: left;
+	margin-left: 0.3rem;
+}
+.order_pro .text h4{
+	font-size: 0.28rem;
+	font-weight: bold;
+	margin-bottom: 0.08rem;
+	color: #000;
+}
+.order_pro .text p:nth-child(2){
+	color: #d6d6d6;
+}
+
+.account_pay{
+	border-top: 0.08rem solid #F3F2F0;
+}
+.account_pay p{
+	padding-left: 0.3rem;
+	width: 100%;
+	height: 0.7rem;
+	line-height: 0.7rem;
+	font-size: 0.3rem;
+	color: #000;
+	border-bottom: 2px solid #f3f2f0;
+}
+.account_pay .pay_way{
+	height: 0.87rem;
+	line-height: 0.87rem;
+	border-bottom: 1px solid #E8E4E2;
+	padding-left: 0.3rem;
+}
+
+.account_pay .img{
+	width: 0.54rem;
+	height: 0.54rem;
+	margin-top: 0.15rem;
+	margin-right: 0.3rem;
+	float: left;
+}
+.account_pay .checked,
+.account_pay .check{
+	float: right;
+	margin-right: 0.3rem;
+}
+.account_pay .checked_img{
+	width: 0.37rem;
+    height: 0.37rem;
+    margin-top: 0.25rem;
+    background-size: 0.37rem 0.37rem;
+}
+.account_pay .checked .checked_img{
+	background-image: url(../img/choosed.png);
+}
+.account_pay .check .checked_img{
+	background-image: url(../img/choose.png);
+}
+.pay_btn{
+	display: block;
+	width: 80%;
+	height: 0.77rem;
+	line-height: 0.7rem;
+	text-align: center;
+	color: #fff;
+	background-color: #2BC1FF;
+	margin-left: 10%;
+	border-radius: 5px;
+	margin-top: 1.2rem;
+}

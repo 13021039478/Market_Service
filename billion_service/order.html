@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<script src="js/fit.js"></script>
+		<title>我的订单</title>
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/comm.css" />
+		<link rel="stylesheet" type="text/css" href="css/order.css" />
+	</head>
+	<body>
+		<!--头部选项卡-->
+		<div class="o_tab">
+			<ul>
+				<li><span>全部</span></li>
+				<li class="active"><span>待付款</span></li>
+				<li><span>已完成</span></li>
+			</ul>
+		</div>
+		<!--订单内容-->
+		<div class="o_content">
+			<ul>
+				<!--订单全部内容-->
+				<li id="all" style="display: none;"></li>
+				<!--待付款-->
+				<li id="no_pay">
+					<!--<div class="order">
+						<div class="order_info">
+							<div class="left">
+								<p>订单编号：<span>12345678</span></p>
+								<p>下单时间：<span>2017-7-8</span></p>
+							</div>
+							<a class="right" href="javascript:;">等待付款</a>
+							<div class="del">
+								<img src="img/del.png" alt="" />
+							</div>
+						</div>
+						<div class="pro_list">
+							<div class="order_pro">
+							<div class="img">
+								<img src="img/1.png" alt="" />
+							</div>
+							
+							<div class="text">
+								<h4>腾讯云服务</h4>
+								<p>安全稳定，高弹性的计算机服务，给您提供更高效的体验</p>
+								<p style="color: #2BC1FF;">
+									￥<span class="price">688.00</span>
+								</p>
+							</div>
+						</div>
+						</div>
+						
+						<div class="pay">
+							<span>共1件商品 需付款￥788.00</span>
+							<a href="account.html">立即付款</a>
+						</div>
+					</div>-->
+				</li>
+				<!--已完成-->
+				<li id="done_pay" style="display: none;">
+				</li>
+			</ul>
+		</div>
+		<!--弹出窗-->
+		<div class="top"></div>
+		<div class="alter_content">
+			<div class="content_top">
+				<h3>提示</h3>
+				<p>删除确定该订单？</p>
+			</div>
+			<div class="content_btn" style="line-height: 0.7rem;">
+				<a style="border-right: 1px solid #c2c3c4;" id="cancel">取消</a>
+				<a style="color: #7bbef8;" id="confirm">确定</a>
+			</div>
+		</div>
+	</body>
+	<script src="js/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/cokie.js"></script>
+	<script src="js/order.js"></script>
+</html>

@@ -1,0 +1,115 @@
+
+/*头部咯logo*/
+header {
+	width: 100%;
+	height: 0.49rem;
+	position: fixed;
+	top: 0;
+	background-color: #fff;
+}
+header .logo{
+	width: 1.54rem;
+	height: 0.22rem;
+	float: left;
+	background-image: url(../img/logo.png);
+	background-size: 100% 100%;
+	margin-left: 0.4rem;
+    margin-top: 0.13rem;
+}
+header .right{
+	float: right;
+	margin-right: 0.4rem;
+    margin-top: 0.09rem;
+}
+header .right span:first-child{
+	margin-right: 10px;
+}
+.content{
+	width: 100%;
+	margin-top: 0.49rem;
+}
+.content .banner{
+	width: 100%;
+	height: 3.12rem;
+}
+.content .pro_list{
+	width: 100%;
+	height: 3.12rem;
+	margin-top: 10px;
+	background-color: #fff;
+	text-align: center;
+}
+.content .pro_list a{
+	width: 25%;
+	float: left;
+	padding-top: 0.25rem;
+}
+.content .pro_list a img{
+	width: 0.78rem;
+	height: 0.78rem;
+}
+.content .pro_list a span{
+	display: block;
+}
+/*推荐服务、限时抢购*/
+.content .service{
+	margin-top: 10px;
+	background-color: #FFFFFF;
+}
+.content .buy{
+	background-color: #fff;
+}
+.content .top_title{
+	border-bottom: 1px solid #E8E4E2;
+    width: 100%;
+    height: 0.87rem;
+    line-height: 0.87rem;
+    padding-left: 0.3rem;
+}
+.content .top_title a{
+	float: right;
+    margin-right: 0.3rem;
+}
+.content .service_content{
+	width: 100%;
+	height: 2.36rem;
+	border-bottom: 1px solid #E8E4E2;
+	padding-top: 0.15rem;
+	padding-left: 0.3rem;
+}
+.content .service_content .img{
+	width: 2rem;
+	height: 2rem;
+	float: left;
+}
+.content .service_content .text{
+	float: left;
+	width: 58%;
+	margin-left: 0.2rem;
+}
+.content .service_content .text p:first-child{
+	font-size: 0.3rem;
+	color: #000;
+}
+.content .service_content .text p:nth-child(2){
+	color: #b5b5b5;
+}
+.content .service_content .text .buy_now{
+	width: 1.2rem;
+	height: 0.45rem;
+	line-height: 0.45rem;
+	text-align: center;
+	color: #fff;
+	background: #2bc1ff;
+	border-radius: 5px;
+}
+.content .clock span{
+	width: 0.32rem;
+    height: 0.32rem;
+    display: inline-block;
+    background: #000;
+    color: #fff;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 0.32rem;
+}

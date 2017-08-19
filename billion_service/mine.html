@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<script src="js/fit.js" type="text/javascript" charset="utf-8"></script>
+		<title>我的</title>
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/comm.css" />
+		<link rel="stylesheet" type="text/css" href="css/mine.css" />
+	</head>
+
+	<body>
+		<!--头部个人信息-->
+		<div class="mine_head">
+			<!--<a href="register.html">
+				<div class="set"></div>
+			</a>
+			<div class="head_img">
+				<img src="img/mine_head.png" alt="" />
+			</div>
+			<div class="name">
+				<p style="font-size: 0.3rem;">陈雨馨</p>
+			</div>-->
+		</div>
+		<!--用户相关信息-->
+		<div class="user_news">
+			<ul>
+				<a href="order.html">
+					<li>
+						<i></i>
+						<img style="width: 0.29rem;height: 0.4rem;" src="img/order_icon.png" alt="" />
+						<p>我的订单</p>
+					</li>
+				</a>
+				<li >
+					<i></i>
+					<!--<img style="width: 0.43rem;height: 0.39rem;" src="img/card_icon.png" alt="" />-->
+					<p class="currentPoints" style="margin-bottom: 0.1rem;">0</p>
+					<p>我的积分</p>
+				</li>
+				<a href="car.html">
+					<li>
+						<img style="width: 0.41rem;height: 0.39rem;" src="img/car_icon.png" alt="" />
+						<p>我的购物车</p>
+					</li>
+				</a>
+			</ul>
+		</div>
+		<!--联系我们-->
+		<div class="contact_us" id="contact_us">
+			<div class="img">
+				<img src="img/tel_icon.png" alt="" />
+			</div>
+			<div style="float: left;"><span>联系我们</span></div>
+			<div class="more">
+				<img src="img/arrow.png" />
+			</div>
+		</div>
+		<!--弹出窗-->
+		<div class="top"></div>
+		<div class="alter_content">
+			<div class="content_top">
+				<h3>提示</h3>
+				<p>确定拨打4008-622-333</p>
+			</div>
+			<div class="content_btn">
+				<a style="border-right: 1px solid #c2c3c4;" id="cancel">取消</a>
+				<a href="tel:4008-622-333" style="color: #7bbef8;" id="confirm">确定</a>
+			</div>
+		</div>
+		<!--关于我们-->
+		
+			<div class="contact_us about">
+				<div class="img">
+					<img src="img/about_icon.png" alt="" />
+				</div>
+				<div style="float: left;"><span>关于我们</span></div>
+				<div class="more">
+					<img src="img/arrow.png" />
+				</div>
+			</div>
+		
+		<!--在线咨询-->
+		
+			<div class="contact_us online">
+				<div class="img">
+					<img src="img/message_icon.png" alt="" />
+				</div>
+				<div style="float: left;"><span>在线咨询</span></div>
+				<div class="more">
+					<img src="img/arrow.png" />
+				</div>
+			</div>
+		
+
+		<!--常见问题-->
+		
+			<div class="contact_us problem">
+				<div class="img">
+					<img src="img/problem_icon.png" alt="" />
+				</div>
+				<div style="float: left;"><span>常见问题</span></div>
+				<div class="more">
+					<img src="img/arrow.png" />
+				</div>
+			</div>
+		
+
+		<!--底部导航栏-->
+		<footer>
+			<a href="home.html" class="nav_index">
+				<i></i>
+				<span>首页</span>
+			</a>
+			<a href="classify.html" class="nav_classify">
+				<i></i>
+				<span>分类</span>
+			</a>
+			<a href="car.html" class="nav_car">
+				<i></i>
+				<span>购物车</span>
+			</a>
+			<a href="mine.html" class="nav_mine active">
+				<i></i>
+				<span>我的</span>
+			</a>
+		</footer>
+	</body>
+	<script src="js/jquery-1.8.3.min.js"></script>
+	<script src="js/cokie.js"></script>
+	<script>
+		$(function(){
+			var currentPoints = getCookie("currentPoints");
+			if(currentPoints == ''){
+				currentPoints = 0;
+			}
+			$(".currentPoints").text(currentPoints)
+			var headimg=decodeURIComponent(getCookie("headimg")) ;
+			console.log(headimg);
+			var nickname=getCookie("nickname");
+			nickname = unescape(nickname);
+			var html = '';
+			html='<a href="register.html"><div class="set"></div></a>'+
+			     '<div class="head_img"><img src="'+headimg+'" alt="" /></div>'+
+			    '<div class="name"><p style="font-size: 0.3rem;">'+nickname+'</p></div>';
+			$(".mine_head").html(html);
+		})
+		//		点击联系我们
+		$("#contact_us").click(function() {
+			$(".top").css("display", "block");
+			$(".alter_content").css("display", "block");
+		})
+		//		点击弹出窗确定
+		$("#confirm").click(function() { 
+			$(".top").css("display", "none");
+			$(".alter_content").css("display", "none");
+
+		})
+		//		点击弹出窗取消
+		$("#cancel").click(function() {
+			$(".top").css("display", "none");
+			$(".alter_content").css("display", "none");
+		})
+		$(".about").click(function(){
+			location.href='about.html'
+		})
+		$(".online").click(function(){
+			location.href='online.html'
+		})
+		$(".problem").click(function(){
+			location.href='problem.html'
+		})
+	</script>
+
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<script src="js/fit.js" type="text/javascript" charset="utf-8"></script>
+		<title>设置</title>
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/comm.css" />
+		<link rel="stylesheet" type="text/css" href="css/set.css" />
+	</head>
+
+	<body>
+		<div class="bar bar1">
+			<img src="img/bar1.png" alt="" />
+		</div>
+		<div id="company">
+			<div class="enter">
+				<label>企&nbsp;业&nbsp;名&nbsp;称</label><input id="c-name" type="text" placeholder="请输入企业名称" />
+			</div>
+			<div class="enter">
+				<label>纳&nbsp;税&nbsp;规&nbsp;模</label>
+				<select id="model" name="">
+					<option value="一般纳税人">一般纳税人</option>
+					<option value="小规模纳税人">小规模纳税人</option>
+				</select>
+				<!--<input id="model" style="width: 48%;" type="text" placeholder="请选择" />-->
+			</div>
+			<div class="enter">
+				<label>所&nbsp;在&nbsp;城&nbsp;市</label><input id="city" type="text" value="北京市" />
+			</div>
+			<div class="enter">
+				<label>企业联系人</label><input id="contact_p" type="text" placeholder="请填写企业联系人姓名" />
+			</div>
+			<button class="next">下一步</button>
+		</div>
+		<div class="bar bar2" style="display: none;">
+			<img src="img/bar2.png" alt="" />
+		</div>
+		<div id="register" style="display: none;">
+			<div class="enter">
+				<label>手&nbsp;机&nbsp;号&nbsp;：</label><input id="tel" type="tel" placeholder="请输入新副卡手机号" />
+			</div>
+			<div class="enter">
+				<label>验&nbsp;证&nbsp;码&nbsp;：</label><input id="code" style="width: 48%;" type="text" placeholder="请输入验证码" />
+				<a class="getCode" href="javascript:;">获取验证码</a>
+			</div>
+			<div class="enter">
+				<label>密 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码：</label><input id="pwd" type="password" placeholder="请输入密码" />
+			</div>
+			<div class="enter">
+				<label>确认密码：</label><input id="re_pwd" type="password" placeholder="请确认密码" />
+			</div>
+			<button class="bind">绑定</button>
+			<div class="care">
+				<p>
+					<i></i>
+					<span>在购买服务之前请绑定帐号，将用于服务产品的登录帐号</span>
+				</p>
+				<p>
+					<i></i>
+					<span>请确认手机号未注册过</span>
+				</p>
+			</div>
+
+		</div>
+		<!--弹出窗-->
+		<div class="top"></div>
+		<div class="alter_content">
+			<div class="content_top">
+				<h3 style="margin-top: 0.2rem;margin-bottom: 0.1rem;">图片验证码</h3>
+				<div style="height: 0.9rem;background-color: #eee;padding-top: 0.2rem;">
+					<input class="enter_code" style="border: 1px solid #eee;font-size:0.2rem;width: 2rem;height: 0.5rem;line-height:0.5rem;float: left;margin-left: 0.8rem;" type="text" placeholder="请输入图片验证码" />
+					<div class="code_img" style="width: 2rem;height: 0.5rem;border: 1px solid #eee;margin-left: 0.8rem;float: left;"></div>
+				</div>
+
+			</div>
+			<div class="content_btn">
+				<a style="border-right: 1px solid #c2c3c4;" id="cancel">取消</a>
+				<a style="color: #7bbef8;" id="confirm">确定</a>
+			</div>
+		</div>
+		<div id="sum-company"  style="display:none;">
+			<div class="news-div">
+				<span>企&nbsp;业&nbsp;名&nbsp;称</span>
+				<span class="company">才兴邦科技有限公司</span>
+			</div>
+			<div class="news-div">
+				<span>纳&nbsp;税&nbsp;规&nbsp;模</span>
+				<span class="model">一般纳税人</span>
+			</div>
+			<div class="news-div">
+				<span>所&nbsp;在&nbsp;城&nbsp;市</span>
+				<span class="city">北京市</span>
+			</div>
+			<div class="news-div">
+				<span>企业联系人</span>
+				<span class="contact_p">杨晶晶</span>
+			</div>
+			<div class="news-div">
+				<span>手&nbsp;&nbsp;&nbsp;机&nbsp;&nbsp;&nbsp;号</span>
+				<span style="text-align: right;" class="phone">1278009475</span>
+			</div>
+			<a href="change.html">
+				<div class="news-div" style="margin-top: 0.5rem;">
+					<span>修改密码</span>
+					<img style="width: 0.21rem;height: 0.38rem;float: right;margin-top: 0.3rem;margin-right: 0.5rem;" src="img/arrow.png" alt="" />
+				</div>
+			</a>
+
+		</div>
+	</body>
+	<script src="js/jquery-1.8.3.min.js"></script>
+	<script src="js/cokie.js"></script>
+	<script src="js/reg.js"></script>
+	<script>
+		$(".next").click(function(){
+			$("#company").css("display","none");
+			$(".bar1").css("display","none");
+			$(".bar2").css("display","block");
+			$("#register").css("display","block");
+		})
+//		$(".bind").click(function(){
+//			$("#register").css("display","none");
+//			$(".bar2").css("display","none");
+//			$("#sum-company").css("display","block");
+//		})
+	</script>
+
+</html>
